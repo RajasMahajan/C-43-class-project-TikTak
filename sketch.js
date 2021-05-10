@@ -3,15 +3,19 @@ var mn = minute();
 var sc = second();
 function setup() {
   createCanvas(800,400);
- // createSprite(400, 200, 50, 50);
- angleMode(DEGREES);
-}
-function draw() {
-  background(0,0,0);  
  
+}
+function draw() { 
+  background("black");  
+  angleMode(DEGREES);
   scAngle = map(sc,0,60,0,360);
-  stroke(255,0,0);
-  stokeWeight(7);
+  translate(200,200);
+  
+  push();
+  rotate(scAngle);
+  stroke("green");
+  strokeWeight(7);
   line(0,0,100,0);
+  pop();
   // drawSprites();
 }
