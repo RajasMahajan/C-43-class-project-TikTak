@@ -10,7 +10,10 @@ function draw() {
   var sc = second();
   scAngle = map(sc,0,60,0,360);
   translate(200,200);
-  
+  stroke("green");
+  strokeWeight(8);
+  fill("black")
+  arc(5,5,200,200,scAngle,10)
   push();
   rotate(scAngle);
   stroke("green");
@@ -18,22 +21,33 @@ function draw() {
   line(0,0,100,0);
   pop();
   
-  scAngle = map(mn,0,60,0,360);
+  // scAngle1 = map(mn,0,60,0,360);
+  scAngle = map(sc,0,60,0,360);
+  translate(200,200);
+  stroke("blue");
+  strokeWeight(8);
+  fill("black")
+  arc(5,5,200,200,scAngle,10)
   translate(0,1.5);
-  
-  push();
-  rotate(scAngle);
+    push();
+  rotate(scAngle1);
   stroke("blue");
   strokeWeight(7);
   line(0,0,95,0);
   pop();
   
   
-  scAngle = map(hr,0,12,0,360);
+  scAngle2 = map(hr,0,60,0,360);
+  scAngle = map(sc,0,60,0,360);
+  translate(200,200);
+  stroke("red");
+  strokeWeight(8);
+  fill("black")
+  arc(5,5,200,200,scAngle,10)
   translate(0,1.5);
   
   push();
-  rotate(scAngle);
+  rotate(scAngle2);
   stroke("red");
   strokeWeight(7);
   line(0,0,80,0);
